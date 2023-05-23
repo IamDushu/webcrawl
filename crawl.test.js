@@ -56,3 +56,32 @@ test('getURLsFromHTML relative', ()=>{
     const expected = ['https://dushyanth.in/resume/']
     expect(actual).toEqual(expected)
 })
+
+test('getURLsFromHTML both', ()=>{
+    const inputHTMLBody = `
+    <html>
+        <body>
+            <a href="https://dushyanth.in/resume/">Dushyanth Resume</a>
+            <a href="/projects/">Dushyanth Projects</a>
+        </body>
+    <html>
+    `
+    const inputBaseURL = 'https://dushyanth.in'
+    const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
+    const expected = ['https://dushyanth.in/resume/', "https://dushyanth.in/projects/"]
+    expect(actual).toEqual(expected)
+})
+
+test('getURLsFromHTML invalid', ()=>{
+    const inputHTMLBody = `
+    <html>
+        <body>
+            <a href="invalid">Invalid URL</a>
+        </body>
+    <html>
+    `
+    const inputBaseURL = 'https://dushyanth.in'
+    const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
+    const expected = []
+    expect(actual).toEqual(expected)
+})
