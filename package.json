@@ -1,0 +1,23 @@
+{
+  "name": "webcrawl",
+  "version": "1.0.0",
+  "description": "We're going to write a JavaScript application that generates an \"internal links\" report for any website on the internet by crawling each page of the site.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamDushu/webcrawl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamDushu/webcrawl/issues"
+  },
+  "homepage": "https://github.com/IamDushu/webcrawl#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
